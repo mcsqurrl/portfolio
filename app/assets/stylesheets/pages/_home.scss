@@ -1,1 +1,99 @@
 // Specific CSS for your home-page
+.home-title {
+  padding: 55px;
+}
+
+.title-text {
+  font-family: $title;
+  font-weight: 400;
+  font-size: 55px;
+}
+
+.fond-bord {
+  margin-top: 150px;
+  background-image: url("fond");
+  background-position: center;
+  background-size: 1200px;
+  background-repeat: no-repeat;
+  padding: 175px;
+  position: relative;
+}
+
+.etoile {
+  background-image: url("etoile1.png");
+  background-size: cover;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 668px;
+  left: 197px;
+  z-index: 1;
+}
+
+.etoile:hover {
+  background-image: url("etoile_rose.png");
+  z-index: 1;
+}
+
+.smiley {
+  background-image: url("smiley.png");
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 357px;
+  left: 1075px;
+  z-index: 1;
+}
+
+.smiley:hover {
+  background-image: url("smiley_rose.png");
+  z-index: 1;
+}
+
+.button-index-hover{
+  opacity: 0;
+  position: absolute;
+  top: 570px;
+  left: 1157px;
+  transform: rotate(-10deg);
+  z-index: 1;
+}
+
+.button-index{
+  opacity: 1;
+  position: absolute;
+  top: 570px;
+  left: 1157px;
+  transform: rotate(-10deg);
+  z-index: 1;
+}
+
+
+.button-index:hover + .button-index {
+  opacity: 1; /* afficher l'image survolée */
+}
+
+.scotch {
+  background-image: url("scotch.png");
+  background-size: cover;
+  width: 250px;
+  height: 256px;
+  position: absolute;
+  top: 80px;
+  left: 1310px;
+}
+
+.button-home {
+  width: 19rem;
+  position: absolute;
+  transform: rotate(350deg);
+  top: 35rem;
+  left: 73rem;
+  z-index: 1;
+}
+
+.button-home:hover {
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}

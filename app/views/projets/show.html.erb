@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="home-title">
+    <h1 class="title-portfolio">> <%=  @projet.title %></h1>
+  </div>
+  <div class="navbar">
+    <div class="typo">
+      <%= image_tag("a_logo.png", alt: "logo", class: "logo_a") %>
+    </div>
+    <div class="logo">
+      <%= image_tag("fond_logo_2.png", alt: "logo", class: "logo_fond") %>
+    </div>
+    <div class="emoji1">
+      <%= link_to projets_path do %>
+        <i class="fa-solid fa-scissors"></i>
+        <p class="texte-projet">portfolio</p>
+      <% end %>
+    </div>
+    <div class="emoji2">
+      <%= link_to about_path do %>
+        <i class="fa-solid fa-face-smile"></i>
+        <p class="texte-about">about</p>
+      <% end %>
+    </div>
+    <div class="emoji3">
+      <%= link_to "mailto:aurore.pinhoesilva@gmail.com" do %>
+        <i class="fa-solid fa-envelope"></i>
+        <p class="texte-contact">contact</p>
+      <% end %>
+    </div>
+  </div>
+  <div class="bloc-projet">
+    <div class="images-projets">
+      <%= cl_image_tag @projet.photos %>
+      <%= image_tag("rectangle_show.png", class: "rectangle") %>
+    </div>
+    <div class="bloc-description">
+      <div class="infos">
+        <p><em><%= @projet.year %></em><br><strong><%= @projet.client %></strong><br><%= @projet.role %><br><%= @projet.software %></p>
+      </div>
+      <div class="trait">
+        <%= image_tag("trait.png", alt: "tiret", style: "width: 0.25rem;") %>
+      </div>
+      <div class="description">
+        <p><%= @projet.description %></p>
+      </div>
+    </div>
+  </div>
+  <div class="fond_desc">
+    <%= image_tag("desc.png", class:"desc") %>
+  </div>
+  <div class="bloc-bck">
+    <%= link_to projets_path do %>
+      <%= image_tag("fleche_back.png", alt: "image de projet", class: "button-back")%>
+    <% end %>
+  </div>
+</div>

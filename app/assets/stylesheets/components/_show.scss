@@ -1,0 +1,80 @@
+.bloc-description {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  top: 47rem;
+  left: 42rem;
+}
+
+.infos {
+  width: 30rem;
+  padding: 3rem;
+  text-align: right;
+}
+
+.description {
+  width: 30rem;
+  padding: 3rem
+}
+
+.trait {
+  top: 2rem;
+  margin-top: 3.3rem;
+}
+
+.button-back {
+  width: 5rem;
+}
+
+.button-back:hover {
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}
+
+.bloc-bck {
+  padding: 3rem;
+  padding-bottom: 9rem;
+  margin-left: -29rem;
+  text-align: center;
+  width: auto;
+}
+
+.logo_fond {
+  left: -5.25rem;
+  width: 6rem;
+  position: absolute;
+  top: -6.5rem;
+}
+
+.logo_a {
+  left: -4.7rem;
+  width: 5rem;
+  position: absolute;
+  top: -6rem;
+  z-index: 1;
+  transform: none;
+}
+
+.logo img {
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rectangle {
+  margin-left: 12rem;
+}
+
+.desc {
+  width: 49rem;
+  position: absolute;
+  left: 51rem;
+  top: 47rem;
+}

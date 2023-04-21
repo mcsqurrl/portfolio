@@ -1,12 +1,96 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.emoji2 {
+  font-size: 60px;
+  text-decoration: none;
+  position: absolute;
+  top: 344px;
+  left: -52px;
+  i {
+    color: black;
+  }
+  i:hover {
+    color: #FF5A9F;
+  }
+
+  .texte-about {
+    text-decoration: none;
+    color: white;
+    transform: rotate(20deg);
+    padding: 0 9px;
+    font-size: 20px;
+    opacity: 0; /* Masque le texte par défaut */
+    transition: opacity 0.3s ease; /* Animation de transition pour le texte */
+  }
+
+  /* Affiche le texte au survol */
+  :hover .texte-about {
+    opacity: 1;
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.emoji1 {
+  font-size: 60px;
+  text-decoration: none;
+  position: absolute;
+  top: 7rem;
+  left: -5rem;
+  i {
+    color: black;
+  }
+  i:hover {
+    color: #FF5A9F;
+  }
+  .texte-projet {
+    text-decoration: none;
+    color: white;
+    transform: rotate(-45deg);
+    padding: 0 9px;
+    font-size: 20px;
+    opacity: 0; /* Masque le texte par défaut */
+    transition: opacity 0.3s ease; /* Animation de transition pour le texte */
+  }
+
+  /* Affiche le texte au survol */
+  :hover .texte-projet {
+    opacity: 1;
+  }
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.emoji3 {
+  font-size: 60px;
+  text-decoration: none;
+  position: absolute;
+  top: 579px;
+  left: -88px;
+  i {
+    color: black;
+  }
+  i:hover {
+    color: #FF5A9F;
+  }
+
+  .texte-contact {
+    text-decoration: none;
+    color: white;
+    transform: rotate(350deg);
+    padding: 0 9px;
+    font-size: 20px;
+    opacity: 0; /* Masque le texte par défaut */
+    transition: opacity 0.3s ease; /* Animation de transition pour le texte */
+  }
+
+  /* Affiche le texte au survol */
+  :hover .texte-contact {
+    opacity: 1;
+  }
+}
+
+.navbar {
+  position: fixed;
+  top: 157px;
+  left: 189px;
+}
+
+.button-nav {
+  width: 30px;
+  margin-bottom: 10px;
 }

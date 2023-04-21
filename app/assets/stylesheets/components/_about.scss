@@ -1,0 +1,111 @@
+.photo-about {
+  width: 21rem;
+  position: absolute;
+  top: 5.6rem;
+  left: 85.5rem;
+  z-index: 1;
+}
+
+.fond-bord-about {
+  margin-top: -11rem;
+  margin-left: 6rem;
+  background-image: url(/assets/fond.png);
+  background-position: center;
+  background-size: 74rem;
+  background-repeat: no-repeat;
+  padding: 11rem;
+  position: relative;
+}
+
+.hello-about {
+  width: 19rem;
+  position: absolute;
+  top: 10rem;
+  left: 21rem;
+  z-index: 1;
+}
+
+.deco-about {
+  width: 24rem;
+  position: absolute;
+  top: 42rem;
+  left: 80rem;
+  z-index: 1;
+}
+
+.fleche-about {
+  width: 10rem;
+  position: absolute;
+  top: 8rem;
+  left: 54rem;
+  z-index: 1;
+}
+
+.list-link {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+
+.list-skills {
+  margin-top: 20px;
+}
+
+.competences {
+  font-family: $title;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.button-link1 {
+  display: flex;
+  margin-top: 30px;
+}
+
+.button-link {
+  display: flex;
+  margin-top: 20px;
+}
+
+.espace {
+  margin: 0 10px;
+}
+
+.no-decoration{
+  text-decoration: none;
+  color: black;
+}
+
+.no-decoration:hover {
+  color: #ff5a9f;
+}
+
+.fafa {
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.reseaux {
+  margin-top: 10px;
+}
+
+.qualites {
+  margin-left: 110px;
+}
+
+.bloc-bck-about {
+  padding: 3rem;
+}
+
+.button-back-about {
+  width: 13rem;
+  position: absolute;
+  top: 34rem;
+  left: 80rem;
+  z-index: 1;
+}
+
+.button-back-about:hover {
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}

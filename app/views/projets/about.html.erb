@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="home-title">
+    <h1 class="title-portfolio">> About</h1>
+  </div>
+  <div class="navbar">
+    <div class="typo">
+      <%= image_tag("a_logo.png", alt: "logo", class: "logo_a") %>
+    </div>
+    <div class="logo">
+      <%= image_tag("fond_logo_2.png", alt: "logo", class: "logo_fond") %>
+    </div>
+    <div class="emoji1">
+      <%= link_to projets_path do %>
+        <i class="fa-solid fa-scissors"></i>
+        <p class="texte-projet">portfolio</p>
+      <% end %>
+    </div>
+    <div class="emoji2">
+      <%= link_to about_path do %>
+        <i class="fa-solid fa-face-smile"></i>
+        <p class="texte-about">about</p>
+      <% end %>
+    </div>
+    <div class="emoji3">
+      <%= link_to "mailto:aurore.pinhoesilva@gmail.com" do %>
+        <i class="fa-solid fa-envelope"></i>
+        <p class="texte-contact">contact</p>
+      <% end %>
+    </div>
+  </div>
+  <div class="projets">
+   <%= image_tag("photo_about.png", alt: "photo about", class: "photo-about") %>
+  </div>
+  <div class="projets">
+   <%= image_tag("hello_about.png", alt: "hello", class: "hello-about") %>
+  </div>
+
+  <div class="container fond-bord-about">
+    <div class="home-title">
+      <h1 class="title-text">I’m Aurore,</h1>
+      <p>Illustratrice avec un diplôme de graphisme et une formation en développement FullStack au Wagon Paris. Créative
+        et passionnée par le design graphique, je veux me reconvertir en tant que Product Designer <br>afin de collaborer en équipe
+        pour créer un produit fini haut de gamme.</p>
+      <div class="list-skills">
+        <div class="button-link1">
+          <div>
+            <h1 class="competences">Mes Compétences</h1>
+            <p>• Indesign / Photoshop / Illustrator<br>• Figma / Procreate <br>• HTML / CSS / JS <br>• Ruby / Ruby on Rails</p>
+          </div>
+          <div class="qualites">
+            <h1 class="competences">Mes Qualités</h1>
+            <p>• Créative<br>• Organisée / Rigoureuse <br>• Esprit d'équipe <br>• Empathique</p>
+          </div>
+        </div>
+      </div>
+      <div class="list-link">
+        <div class="button-link">
+          <h1 class="competences"><a href="mailto:aurore.pinhoesilva@gmail.com" class="no-decoration">Me Contacter</a></h1>
+          <h1 class="competences espace">|</h1>
+          <a href="https://drive.google.com/file/d/1I1g61f9cBxkgtT1WG2AnhpBJZQLUMgA8/view?usp=share_link" target="_blank" class="no-decoration">
+            <h1 class="competences">Mon CV</h1>
+          </a>
+        </div>
+        <div class="reseaux">
+          <a href="https://www.linkedin.com/in/aurore-pinho-e-silva-02aa64a9/" class="no-decoration fafa" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/mcsqurrl" class="no-decoration fafa" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bloc-bck-about">
+    <%= link_to projets_path do %>
+      <%= image_tag("fleche_back.png", alt: "image de projet", class: "button-back-about")%>
+    <% end %>
+  </div>
+
+
+</div>

@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="home-title">
+    <h1 class="title-portfolio">> Portfolio</h1>
+  </div>
+  <div class="navbar">
+    <div class="typo">
+      <%= image_tag("a_logo.png", alt: "logo", class: "logo_a") %>
+    </div>
+    <div class="logo">
+      <%= image_tag("fond_logo_2.png", alt: "logo", class: "logo_fond") %>
+    </div>
+    <div class="emoji1">
+      <%= link_to projets_path do %>
+        <i class="fa-solid fa-scissors"></i>
+        <p class="texte-projet">portfolio</p>
+      <% end %>
+    </div>
+    <div class="emoji2">
+      <%= link_to about_path do %>
+        <i class="fa-solid fa-face-smile"></i>
+        <p class="texte-about">about</p>
+      <% end %>
+    </div>
+    <div class="emoji3">
+      <%= link_to "mailto:aurore.pinhoesilva@gmail.com" do %>
+        <i class="fa-solid fa-envelope"></i>
+        <p class="texte-contact">contact</p>
+      <% end %>
+    </div>
+  </div>
+
+
+  <div class="projets">
+    <% @projet.each do |projet| %>
+    <%= link_to projet_path(projet) do %>
+      <%= cl_image_tag @projet.first.photos[0].key, alt: "projet" %>
+    <% end %>
+    <% end %>
+  </div>
+
+</div>

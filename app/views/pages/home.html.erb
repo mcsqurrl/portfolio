@@ -1,2 +1,22 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <div>
+    <div class="scotch"></div>
+  </div>
+  <div>
+    <%= link_to projets_path do %>
+      <%= image_tag("fleche.png", alt: "image de projet", class: "button-home")%>
+    <% end %>
+  </div>
+  <div>
+    <div class="smiley"></div>
+  </div>
+  <div>
+    <div class="etoile"></div>
+    <%#= image_tag("etoilerose.png", class: "etoile") %>
+  </div>
+  <div class="container fond-bord">
+    <div class="home-title">
+      <h1 class="title-text">Hello, I’m Aurore <br> >Illustration + Graphisme <br> + Developper Full Stack</h1>
+    </div>
+  </div>
+</div>

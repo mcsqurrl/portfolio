@@ -1,0 +1,42 @@
+.projets {
+  padding: 20px;
+}
+
+.texte-projet {
+  opacity: 0;
+  position: absolute;
+  top: -0.5rem;
+  left: 3rem;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-family: $title;
+  font-size: 25px;
+  color: white;
+  background-color: black;
+}
+
+.texte-about {
+  opacity: 0;
+  position: absolute;
+  top: 5.5rem;
+  left: -2rem;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-family: $title;
+  font-size: 25px;
+  color: white;
+  background-color: black;
+}
+
+.texte-contact {
+  opacity: 0;
+  position: absolute;
+  top: -2rem;
+  left: -2rem;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-family: $title;
+  font-size: 25px;
+  color: white;
+  background-color: black;
+}
