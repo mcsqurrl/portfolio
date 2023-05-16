@@ -1,10 +1,11 @@
 class ProjetsController < ApplicationController
   def index
-    @projet = Projet.all
+    @projets = Projet.all
   end
 
   def show
     @projet = Projet.find(params[:id])
+    @next_projet = Projet.where('id > ?', @projet.id).order(:id).first
   end
 
   def new

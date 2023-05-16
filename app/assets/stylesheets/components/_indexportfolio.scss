@@ -1,5 +1,74 @@
 .projets {
   padding: 20px;
+  margin-left: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* alignement horizontal */
+  align-items: center; /* alignement vertical */
+  text-align: center;
+  position: relative;
+
+  .img-index {
+    max-width: 350px;
+    padding: 25px;
+    margin-bottom: 10px;
+    filter: grayscale(50%);
+    opacity: 0.7;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .img-index:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+
+  .projet-img-title {
+    position: absolute;
+    margin-top: 22%;
+    transform: rotate(347deg);
+    width: 200px;
+    padding: 5px;
+    color: white;
+    background-color: black;
+    padding: 0 5px;
+    text-align: center;
+    font-size: 20px;
+    font-family: $title;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1; /* Réglage de la superposition */
+  }
+
+  :hover .projet-img-title  {
+    opacity: 1;
+  }
+
+  .projet-img-software {
+    position: absolute;
+    margin-top: 30%;
+    margin-left: 10%;
+    transform: rotate(4deg);
+    width: 200px;
+    padding: 5px;
+    color: white;
+    background-color: black;
+    padding: 0 5px;
+    text-align: center;
+    font-size: 20px;
+    font-family: $title;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1; /* Réglage de la superposition */
+  }
+
+  :hover .projet-img-software  {
+    opacity: 1;
+  }
+}
+
+
+a {
+  text-decoration: none;
 }
 
 .texte-projet {

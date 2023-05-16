@@ -3,11 +3,15 @@
     <h1 class="title-portfolio">> <%=  @projet.title %></h1>
   </div>
   <div class="navbar">
-    <div class="typo">
-      <%= image_tag("a_logo.png", alt: "logo", class: "logo_a") %>
-    </div>
-    <div class="logo">
-      <%= image_tag("fond_logo_2.png", alt: "logo", class: "logo_fond") %>
+    <div class="logo-link">
+      <%= link_to projets_path do %>
+        <div class="typo">
+          <%= image_tag("a_logo.png", alt: "logo", class: "logo_a") %>
+        </div>
+        <div class="logo">
+          <%= image_tag("fond_logo_2.png", alt: "logo", class: "logo_fond") %>
+        </div>
+      <% end %>
     </div>
     <div class="emoji1">
       <%= link_to projets_path do %>
@@ -30,27 +34,78 @@
   </div>
   <div class="bloc-projet">
     <div class="images-projets">
-      <%= cl_image_tag @projet.photos %>
-      <%= image_tag("rectangle_show.png", class: "rectangle") %>
+      <div class="carousel-rectangle">
+        <div class="carousel-rectangle carousel-back">
+          <div id="carouselExampleFade" class="rectangle carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-inner">
+                <% for i in 1..10 %>
+                  <% if @projet.photos[i].present? %>
+                    <div class="carousel-item <%= 'active' if i == 1 %>">
+                      <%= image_tag url_for(@projet.photos[i]) %>
+                    </div>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-bs-slide="prev">
+              <span class="text-dark"><i class="fas fa-chevron-left fa-2x"></i></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-bs-slide="next">
+              <span class="text-dark"><i class="fas fa-chevron-right fa-2x"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="bloc-description">
-      <div class="infos">
-        <p><em><%= @projet.year %></em><br><strong><%= @projet.client %></strong><br><%= @projet.role %><br><%= @projet.software %></p>
-      </div>
-      <div class="trait">
-        <%= image_tag("trait.png", alt: "tiret", style: "width: 0.25rem;") %>
-      </div>
-      <div class="description">
-        <p><%= @projet.description %></p>
+
+    <div class="container-desc">
+      <div class="border-content offset d-inline-block">
+        <div class="bloc-description">
+          <div class="infos">
+            <p><em><%= @projet.year %></em><br><strong><%= @projet.client %></strong><br><u><%= @projet.role %></u><br><%= @projet.software %></p>
+          </div>
+          <div class="trait">
+            <%= image_tag("trait.png", alt: "tiret", style: "width: 0.25rem;") %>
+          </div>
+          <div class="description">
+          <p><%= @projet.description %>
+          <% if @projet.link.present? %>
+            <%= link_to @projet.link, target: "_blank" do %>
+              <br><br><i class="fa-solid fa-globe"></i> <%= @projet.link %>
+            <% end %>
+          <% end %>
+          <% if @projet.demo.present? %>
+            <%= link_to @projet.demo, target: "_blank" do %>
+              <br><br><i class="fa-solid fa-video"></i> Voir la démo !
+            <% end %>
+          <% end %></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="fond_desc">
-    <%= image_tag("desc.png", class:"desc") %>
-  </div>
+
   <div class="bloc-bck">
     <%= link_to projets_path do %>
       <%= image_tag("fleche_back.png", alt: "image de projet", class: "button-back")%>
     <% end %>
+  </div>
+
+  <div class="bloc-next">
+    <% if @next_projet.nil? %>
+      <%= link_to Projet.first do %>
+        <%= image_tag("fleche_next2.png", alt: "image de projet", class: "button-next")%>
+      <% end %>
+    <% else %>
+      <%= link_to @next_projet do %>
+        <%= image_tag("fleche_next2.png", alt: "image de projet", class: "button-next")%>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-copyright">
+    MC Squirrel - Aurore Pinho e Silva 2023 <i class="fa-regular fa-copyright"></i>
   </div>
 </div>

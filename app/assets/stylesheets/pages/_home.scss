@@ -7,10 +7,17 @@
   font-family: $title;
   font-weight: 400;
   font-size: 55px;
+  color: #FF5A9F;
+}
+
+.title-text-2 {
+  font-family: $title;
+  font-weight: 400;
+  font-size: 55px;
 }
 
 .fond-bord {
-  margin-top: 150px;
+  margin-top: 75px;
   background-image: url("fond");
   background-position: center;
   background-size: 1200px;
@@ -41,7 +48,7 @@
   width: 75px;
   height: 75px;
   position: absolute;
-  top: 357px;
+  top: 290px;
   left: 1075px;
   z-index: 1;
 }
@@ -89,7 +96,7 @@
   position: absolute;
   transform: rotate(350deg);
   top: 35rem;
-  left: 73rem;
+  left: 71rem;
   z-index: 1;
 }
 

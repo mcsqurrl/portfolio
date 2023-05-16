@@ -31,11 +31,18 @@
 
 
   <div class="projets">
-    <% @projet.each do |projet| %>
-    <%= link_to projet_path(projet) do %>
-      <%= cl_image_tag @projet.first.photos[0].key, alt: "projet" %>
-    <% end %>
+    <% @projets.each do |projet| %>
+      <%= link_to projet_path(projet) do %>
+        <p class="projet-img-title"><%= projet.title %></p>
+        <p class="projet-img-software"><%= projet.category %></p>
+        <%= image_tag url_for(projet.photos[0]), alt: "projet", class: "img-index" %>
+      <% end %>
     <% end %>
   </div>
 
+</div>
+<div class="footer">
+  <div class="footer-copyright">
+    MC Squirrel - Aurore Pinho e Silva 2023 <i class="fa-regular fa-copyright"></i>
+  </div>
 </div>
